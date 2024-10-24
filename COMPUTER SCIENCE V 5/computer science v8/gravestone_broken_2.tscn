@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn6gc6j6essx3"]
+
+[ext_resource type="PackedScene" uid="uid://wo2ebyx66kqd" path="res://modles/Grave/gravestone-broken.glb" id="1_tp1bc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hovx7"]
+albedo_color = Color(0.165684, 0.209075, 0.0947965, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_maooc"]
+points = PackedVector3Array(-0.144438, 0.358046, 0.0665052, -0.144438, 0.358046, -0.0665513, -0.173576, 0.358046, 0.0665052, 0.115036, 0.0399932, 0.220174, 0.173501, 0.316265, 0.0665052, -0.173576, 0.358046, -0.0665513, 0.173501, 0.316265, -0.0665513, 0.194973, 0.0779885, -0.07475, -0.195, 0.0779885, 0.0747328, 0.115036, 0, 0.220174, 0.219349, 0.0399932, 0.178863, 0.291383, 0.0399932, 0.121587, -0.195, 0.0779885, -0.07475, 0.194973, 0, -0.07475, -0.195, 0, 0.0747328, 0.219349, 0, 0.178863, 0.291383, 0, 0.121587, -0.195, 0, -0.07475)
+
+[node name="gravestone-broken2" instance=ExtResource("1_tp1bc")]
+
+[node name="gravestone-broken" parent="." index="0"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_hovx7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_maooc")

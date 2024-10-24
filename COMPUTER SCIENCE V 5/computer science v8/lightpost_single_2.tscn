@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://x67uywdkb86x"]
+
+[ext_resource type="PackedScene" uid="uid://w7gkf7725pdf" path="res://modles/Lights/lightpost-single.glb" id="1_2kwhg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvusn"]
+albedo_color = Color(0.294347, 0.549036, 0.265941, 1)
+emission_enabled = true
+emission = Color(0.307389, 0.532747, 0.320332, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5gol"]
+albedo_color = Color(0.544162, 0.435939, 0.151601, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8f4k5"]
+points = PackedVector3Array(0.0726233, 0.995221, 0.311267, -0.0732886, 0.995221, 0.311267, 0.0726233, 0.958562, 0.311267, 0.0726233, 0.995221, 0.165339, 0.0686528, 1.20253, 0.307268, -0.0732886, 0.995221, 0.165339, -0.0732886, 0.958562, 0.311267, -0.0693323, 1.20253, 0.307268, 0.0726233, 0.958562, 0.165339, 0.0646679, 0, 0.0646655, 0.0704952, 0.0469858, 0.0704951, 0.0704952, 0.0469858, -0.0705, 0.0686528, 1.20253, 0.1693, 0.0306751, 1.30089, 0.26448, -0.0705035, 0.0469858, -0.0705, -0.0732886, 0.958562, 0.165339, -0.0693323, 1.20253, 0.1693, -0.0705035, 0.0469858, 0.0704951, -0.0646762, 0, 0.0646655, -0.0313547, 1.30089, 0.26448, 0.0646679, 0, -0.0647077, 0.0309464, 1.2286, -0.0309631, 0.0221055, 1.31857, -0.0221439, 0.0306751, 1.30089, 0.212088, 0.0221055, 1.31857, 0.0221016, -0.0646762, 0, -0.0647077, -0.030969, 1.2286, -0.0309631, -0.0313547, 1.30089, 0.212088, -0.022128, 1.31857, -0.0221439, -0.022128, 1.31857, 0.0221016)
+
+[node name="lightpost-single2" instance=ExtResource("1_2kwhg")]
+
+[node name="lightpost-single" parent="." index="0"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_dvusn")
+surface_material_override/0 = SubResource("StandardMaterial3D_m5gol")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+shape = SubResource("ConvexPolygonShape3D_8f4k5")

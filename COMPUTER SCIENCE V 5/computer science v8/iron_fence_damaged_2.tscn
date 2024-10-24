@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://clio18jwjl62r"]
+
+[ext_resource type="PackedScene" uid="uid://56u80tx5p0s0" path="res://modles/Fences/iron-fence-damaged.glb" id="1_1p4ur"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2s07d"]
+albedo_color = Color(0.234604, 0.249921, 0.130002, 1)
+
+[node name="iron-fence-damaged2" instance=ExtResource("1_1p4ur")]
+
+[node name="iron-fence-damaged" parent="." index="0"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_2s07d")

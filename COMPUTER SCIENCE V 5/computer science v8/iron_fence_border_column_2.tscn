@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://csu1esmc7lax7"]
+
+[ext_resource type="PackedScene" uid="uid://ci0tacgpybkot" path="res://modles/Fences/iron-fence-border-column.glb" id="1_1651x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ga8b"]
+albedo_color = Color(0.355347, 0.287648, 0.104286, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7qwqa"]
+points = PackedVector3Array(0.5, 0.8239, -0.40001, 0.5, -2.9092e-14, -0.40001, 0.5, 0.8239, -0.5, 0.399961, 0.8239, -0.40001, 0.399961, 0.0699218, -0.4, 0.5, -2.9092e-14, -0.5, 0.399961, -2.9092e-14, -0.4, 0.399961, 0.8239, -0.5, -0.437549, 0.8239, -0.45001, -0.460063, 0.753898, -0.427506, -0.5, 0.0699218, -0.4, -0.5, -2.9092e-14, -0.5, -0.5, -2.9092e-14, -0.4, -0.5, 0.0699218, -0.5, -0.460063, 0.753898, -0.472504, -0.5, 0.623893, -0.442502, -0.5, 0.623893, -0.457508)
+
+[node name="iron-fence-border-column2" instance=ExtResource("1_1651x")]
+
+[node name="iron-fence-border-column" parent="." index="0"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_7ga8b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_7qwqa")
